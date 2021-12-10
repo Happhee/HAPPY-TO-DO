@@ -1,6 +1,6 @@
 import AddTodoList from '../components/AddTodoList';
 import { connect } from 'react-redux';
-import { addTodoList } from '../actions/todoList';
+import { addTodoList } from '../actions/TodoList';
 
 function mapReduxDispatchToReactProps(dispatch) {
     return {

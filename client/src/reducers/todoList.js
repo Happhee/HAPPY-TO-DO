@@ -7,15 +7,15 @@ const initialState = {
 
 export default function todoList(state = initialState, action) {
 
-    switch (action) {
+    //todoList 추가 
+    switch (action.type) {
         case types.ADD_TODO_LIST:
-            return {
-                ...todoList,
-                todoList: state.todoList.push(action.payload)
-            };
-            console.log(todoList);
-            break;
 
+            return {
+                ...state.todoList,
+                todoList: [...state.todoList, action.payload]
+            };
+            break;
     }
 
     return state;
