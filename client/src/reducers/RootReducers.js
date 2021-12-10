@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import todoList from './TodoList';
+import todoList from './todoList';
 
 //todoList 리듀서 추가
-const RootReducers = combineReducers({
+const rootReducers = combineReducers({
     todoList
 });
 
-export default RootReducers;
+export default rootReducers;
