@@ -1,11 +1,16 @@
 import React from "react";
 import './App.css';
 import AddTodoListRoot from './components/AddTodoListRoot';
+import DisplayTodoListRoot from "./components/DisplayTodoListRoot";
 
 function App() {
   return (
     <div className="App">
-      <AddTodoListRoot></AddTodoListRoot>
+      <div className="rootApp">
+        <AddTodoListRoot></AddTodoListRoot>
+        <DisplayTodoListRoot></DisplayTodoListRoot>
+      </div>
+
     </div>
   );
 }
