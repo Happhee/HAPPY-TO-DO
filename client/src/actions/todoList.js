@@ -1,4 +1,29 @@
-export const ADD_TODO_LIST = "ADD_TODO_LIST";
-export const DELETE_TODO_LIST = "DELETE_TODO_LIST";
-export const SUCCESS_TODO_LIST = 'SUCCESS_TODO_LIST';
-export const UPDATE_TODO_LIST = 'UPDATE_TODO_LIST';
+import * as types from './types'
+
+export function addTodoList(todoText) {
+    return {
+        type: types.ADD_TODO_LIST,
+        payload: todoText
+    };
+}
+
+export function deleteTodoList(todoText) {
+    return {
+        type: types.DELETE_TODO_LIST,
+        payload: todoText
+    }
+}
+
+export function updateTodoList(todoText) {
+    return {
+        type: types.UPDATE_TODO_LIST,
+        payload: todoText
+    }
+}
+
+export function successTodoList(todoList) {
+    return {
+        type: types.SUCCESS_TODO_LIST,
+        todoList: todoList
+    }
+}
