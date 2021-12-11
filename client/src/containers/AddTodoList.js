@@ -1,7 +1,9 @@
 import AddTodoList from '../components/AddTodoList';
 import { connect } from 'react-redux';
-import { addTodoList } from '../actions/TodoList';
-
+import { addTodoList } from '../actions/todoList';
+function mapReduxStateToReactProps(state) {
+    return state.remainTodo
+}
 function mapReduxDispatchToReactProps(dispatch) {
     return {
         onClick: function (todoText) {
@@ -10,4 +12,4 @@ function mapReduxDispatchToReactProps(dispatch) {
     }
 
 }
-export default connect(null, mapReduxDispatchToReactProps)(AddTodoList);
+export default connect(mapReduxStateToReactProps, mapReduxDispatchToReactProps)(AddTodoList);

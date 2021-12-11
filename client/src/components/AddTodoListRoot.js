@@ -3,7 +3,7 @@ import AddTodoList from '../containers/AddTodoList';
 
 function AddTodoListRoot() {
     return (
-        <div>
+        <div >
             <h1>서히의 ToDoList</h1>
             <AddTodoList></AddTodoList>
         </div>

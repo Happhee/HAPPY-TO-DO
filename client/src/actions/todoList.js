@@ -21,9 +21,9 @@ export function updateTodoList(todoText) {
     }
 }
 
-export function successTodoList(todoList) {
+export function successTodoList(todoId) {
     return {
         type: types.SUCCESS_TODO_LIST,
-        todoList: todoList
+        payload: todoId
     }
 }
