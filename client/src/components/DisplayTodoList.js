@@ -24,6 +24,7 @@ const StyledTextCell = styled(TableCell)(({ theme }) => ({
 
     [`&.${tableCellClasses.body}`]: {
         textAlign: 'start',
+        fontSize: '19px'
     },
 
 }));

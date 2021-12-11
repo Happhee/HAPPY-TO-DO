@@ -13,6 +13,7 @@ function AddTodoList(props) {
                 }} />
             <IconButton color="secondary" onClick={function () {
                 props.onClick(todoText)
+                setTodoText('');
             }}>
                 <VscAdd />
             </IconButton>
