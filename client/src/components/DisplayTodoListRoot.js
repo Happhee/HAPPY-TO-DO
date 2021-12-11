@@ -1,10 +1,10 @@
 import React from 'react';
-import DisplayTodoList from './DisplayTodoList';
+import DisplayTodoList from '../containers/DisplayTodoList';
+import '../css/DisplayTodoListRoot.css';
 
 function DisplayTodoListRoot() {
     return (
-        <div >
-            <h1>서히의 ToDoList</h1>
+        <div className="displayTodoListRoot">
             <DisplayTodoList></DisplayTodoList>
         </div>
     )

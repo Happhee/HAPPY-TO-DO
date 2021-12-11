@@ -1,7 +1,7 @@
 import * as types from '../actions/types';
 
 const initialState = {
-    todoList: []
+    todoList: [{ selected: false, todoText: '모던자바읽기' }]
 };
 
 
@@ -13,11 +13,10 @@ export default function todoList(state = initialState, action) {
 
             return {
                 ...state.todoList,
-                todoList: [...state.todoList, action.payload]
+                todoList: [...state.todoList, { selected: false, todoText: action.payload }]
             };
             break;
     }
 
     return state;
-
 }
