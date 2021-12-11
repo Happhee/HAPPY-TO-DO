@@ -7,7 +7,9 @@ function AddTodoList(props) {
     let [todoText, setTodoText] = useState('');
     return (
         <div>
-            <TextField label="해야 할 일" variant="standard" color="secondary" focused
+            <TextField label="해야 할 일" variant="standard"
+
+                color="secondary" focused
                 value={todoText} onChange={function (e) {
                     setTodoText(e.target.value);
                 }} />
@@ -19,6 +21,5 @@ function AddTodoList(props) {
             </IconButton>
         </div>
     )
-
 }
 export default AddTodoList;
