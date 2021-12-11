@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   background-color:#f7dbff;
+  height: 100%;
+  margin: 0;
 
 }
 .rootApp{
@@ -13,6 +15,7 @@
 
   margin-top: 10%;
   margin-bottom: 10%;
+  
 
   display: flex;
   flex-direction: column;
