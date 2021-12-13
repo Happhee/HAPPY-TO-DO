@@ -9,30 +9,41 @@ const initialState = {
 export default function todoList(state = initialState, action) {
 
 
-    //todoList 추가 
     switch (action.type) {
+        //todoList 추가 + 남은 일의 개수 
         case types.ADD_TODO_LIST:
 
             return {
                 ...state,
-                todoList: [...state.todoList, { id: state.todoList.length, selected: false, todoText: action.payload }]
+                todoList: [...state.todoList, { id: state.todoList.length, selected: false, todoText: action.payload }],
+                remainTodo: state.remainTodo + 1
             };
-
         //완료한 리스트 
         case types.SUCCESS_TODO_LIST:
-            let newTodoList = { ...state.todoList }
-            newTodoList[action.payload].selected = !newTodoList[action.payload].selected
-            if (newTodoList[action.payload].selected) {
-                state.remainTodo = state.remainTodo - 1;
+            if (state.todoList[action.payload].selected) {
+                state.remainTodo += 1;
             }
+            else {
+                state.remainTodo -= 1;
+            }
+            state.todoList[action.payload].selected = !state.todoList[action.payload].selected
+
+            return {
+                ...state,
+                todoList: [...state.todoList]
+            };
+        // 할일 삭제하기
+        case types.DELETE_TODO_LIST:
+            if (!state.todoList[action.payload].selected) {
+                state.remainTodo -= 1;
+            }
+            state.todoList.splice(action.payload, 1);
 
             return {
                 ...state,
                 todoList: [...state.todoList]
             }
-
     }
-
     return state;
 }
 

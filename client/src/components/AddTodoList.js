@@ -4,7 +4,7 @@ import { IconButton } from '@mui/material';
 import { VscAdd } from 'react-icons/vsc';
 
 function AddTodoList(props) {
-    console.log(props);
+
     let [todoText, setTodoText] = useState('');
     return (
         <div>

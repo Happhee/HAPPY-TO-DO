@@ -1,6 +1,6 @@
 import DisplayTodoList from '../components/DisplayTodoList';
 import { connect } from 'react-redux';
-import { successTodoList } from '../actions/todoList';
+import { deleteTodoList, successTodoList } from '../actions/todoList';
 
 
 function mapReduxStateToReactProps(state) {
@@ -10,7 +10,11 @@ function mapReduxDispatchToReactProps(dispatch) {
     return {
         onClick: function (todoId) {
             dispatch(successTodoList(todoId));
+        },
+        onDelete: function (todoId) {
+            dispatch(deleteTodoList(todoId));
         }
+
     }
 
 }

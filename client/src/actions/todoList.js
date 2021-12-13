@@ -6,11 +6,16 @@ export function addTodoList(todoText) {
         payload: todoText
     };
 }
-
-export function deleteTodoList(todoText) {
+export function successTodoList(todoId) {
+    return {
+        type: types.SUCCESS_TODO_LIST,
+        payload: todoId
+    }
+}
+export function deleteTodoList(todoId) {
     return {
         type: types.DELETE_TODO_LIST,
-        payload: todoText
+        payload: todoId
     }
 }
 
@@ -21,9 +26,3 @@ export function updateTodoList(todoText) {
     }
 }
 
-export function successTodoList(todoId) {
-    return {
-        type: types.SUCCESS_TODO_LIST,
-        payload: todoId
-    }
-}
