@@ -25,7 +25,7 @@ export default function todoList(state = initialState, action) {
             }
             else {
                 state.remainTodo -= 1;
-            }
+            } 
             state.todoList[action.payload].selected = !state.todoList[action.payload].selected
 
             return {
