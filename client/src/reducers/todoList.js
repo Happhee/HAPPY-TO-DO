@@ -1,12 +1,19 @@
 import * as types from '../actions/types';
+import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 
 function getDate() {
     var today = new Date();
     let date = today.getFullYear() + ' / ' + (today.getMonth() + 1) + ' / ' + today.getDate();
     return date;
 }
+function getIoHeartOutline() {
+    return <IoHeartOutline size="30" />
+}
+function getIoHeartSharp() {
+    return <IoHeartSharp size="30" color='#FD8A69' />
+}
 const initialState = {
-    todoList: [{ id: 0, selected: false, todoText: '모던자바읽기' }],
+    todoList: [{ id: 0, selected: false, icon: getIoHeartOutline(), todoText: '모던자바읽기' }],
     remainTodo: 1,
     nowDate: getDate()
 };
@@ -21,16 +28,18 @@ export default function todoList(state = initialState, action) {
 
             return {
                 ...state,
-                todoList: [...state.todoList, { id: state.todoList.length, selected: false, todoText: action.payload }],
+                todoList: [...state.todoList, { id: state.todoList.length, selected: false, icon: getIoHeartOutline(), todoText: action.payload }],
                 remainTodo: state.remainTodo + 1
             };
         //완료한 리스트 
         case types.SUCCESS_TODO_LIST:
             if (state.todoList[action.payload].selected) {
                 state.remainTodo += 1;
+                state.todoList[action.payload].icon = getIoHeartOutline();
             }
             else {
                 state.remainTodo -= 1;
+                state.todoList[action.payload].icon = getIoHeartSharp();
             }
             state.todoList[action.payload].selected = !state.todoList[action.payload].selected
 
