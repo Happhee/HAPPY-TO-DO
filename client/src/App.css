@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "GongBold";
+  src: url('../src/css/fonts/Gong\ Gothic\ Medium.eot');
+}
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 .App {
   text-align: center;
   background-color:#f7dbff;
   height: 100%;
   margin: 0;
+  font-family: 'Do Hyeon', sans-serif;
 
 }
 .rootApp{
@@ -12,7 +18,6 @@
   border-radius: 10%;
   box-shadow: 0 0 8px 0 rgba((0, 0, 0, 0.04));
   margin: 0 auto;
-
   margin-top: 10%;
   margin-bottom: 10%;
   
