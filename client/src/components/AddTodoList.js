@@ -11,7 +11,7 @@ function AddTodoList(props) {
             <p className="date">{props.nowDate}</p>
             <p className="todoInput">해야 할 일</p>
 
-            <div >
+            <div className="todoInput" >
                 <TextField className="todoInput" variant="standard"
                     color="secondary" focused
                     value={todoText} onChange={function (e) {
