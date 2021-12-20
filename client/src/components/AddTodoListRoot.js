@@ -11,7 +11,6 @@ function AddTodoListRoot() {
                 <span >DO</span>
                 <TiPencil size="50" textDecoration="underline" />
             </div>
-            <p className="date">2021 / 01 / 12</p>
             <AddTodoList></AddTodoList>
         </div>
     )

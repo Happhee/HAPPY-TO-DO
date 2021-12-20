@@ -1,14 +1,36 @@
 .titleDiv{
+  text-align: center;
+
     color: #B96BC6;
 }
 .titleDiv span{
-    font-size: 55px;
+    font-size: 65px;
     font-weight: 600;
     padding-left: 2%;
     padding-right: 2%;
     color: #B96BC6;
 }
+.addTodoList{
+    font-size: 23px;
+}
 
 .date{
-   
+   text-align: end;
+   padding-right: 10%;
+}
+
+.todoInput{
+    justify-content: start;
+    padding-left: 10%;
+    color: #B96BC6;
+    width:75%;
+}
+.remainTodo{
+    text-align: start;
+    padding-left: 10%;
+
+}
+.remainTodoProps{
+    color: #D94925;
+    font-weight: 900;
 }
