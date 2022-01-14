@@ -6,7 +6,7 @@ const app = express();
 const port = 4000
 
 app.use(bodyParser.json());
-mongoose.connect(config.url, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect(config.url, { useUnifiedTopology: true, useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error);
