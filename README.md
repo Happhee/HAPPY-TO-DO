@@ -12,4 +12,10 @@
 이것이 **HAPPY TO DO**의 시작점입니다.
 
 # 🖥 예상 UI
+메인 페이지 : 캘린더 화면
+
+![image](https://user-images.githubusercontent.com/79238676/149601145-579ce8c4-bc56-447d-aa68-b2e79705e343.png)
+
+세부 페이지 : 날짜별 Todo List 
+
 ![](https://images.velog.io/images/seohee0112/post/7e2b81fa-ba58-430a-8f3a-9a5904b47a67/HAPPY%20TO%20DO.png)
