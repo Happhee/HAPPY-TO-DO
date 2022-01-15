@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
-import AddTodoListRoot from './components/AddTodoListRoot';
-import DisplayTodoListRoot from "./components/DisplayTodoListRoot";
+import AddTodoListRoot from './Components/AddTodoListRoot';
+import DisplayTodoListRoot from "./Components/DisplayTodoListRoot";
 
 function App() {
   return (
