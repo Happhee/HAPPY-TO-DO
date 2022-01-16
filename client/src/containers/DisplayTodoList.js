@@ -1,6 +1,6 @@
-import DisplayTodoList from '../components/DisplayTodoList';
+import DisplayTodoList from '../Components/DisplayTodoList';
 import { connect } from 'react-redux';
-import { deleteTodoList, successTodoList } from '../actions/todoList';
+import { deleteTodoList, successTodoList } from '../modules/actions/todoList';
 
 
 function mapReduxStateToReactProps(state) {
