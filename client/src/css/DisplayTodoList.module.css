@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+.displayTodoListRoot{
+    width: 90%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 20%;
+  box-shadow: 0 0 8px 0 rgba((0, 0, 0, 0.04));
+  margin: 0 auto;
+  margin-top: 4%;
+  
+  display: flex;
+  flex-direction: column;
+}

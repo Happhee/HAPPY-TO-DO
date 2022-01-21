@@ -1,0 +1,31 @@
+
+.container {
+  background-color: #6c3779;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width : 1000px) {
+    /* .container{
+        background-color: wheat;
+    }
+      */
+ }
+header{
+    margin-left: 30px;
+}
+ul Link {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+.menu {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    color:white;
+}

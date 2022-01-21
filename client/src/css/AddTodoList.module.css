@@ -1,0 +1,38 @@
+
+.titleContainer{
+  display: flex;
+  color: #B96BC6;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleContainer span{
+    font-size: 65px;
+    font-weight: 600;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #B96BC6;
+}
+
+.addTodoListContainer{
+    font-size: 23px;
+   display: flex;
+   flex-direction: column;
+}
+.date{
+   text-align: end;
+   padding-right: 10%;
+}
+
+.todoInput{
+    padding-left: 10%;
+    color: #B96BC6;
+    width:85%;
+}
+.remainTodo{
+    padding-left: 10%;
+}
+.remainTodoProps{
+    color: #D94925;
+    font-weight: 900;
+}
