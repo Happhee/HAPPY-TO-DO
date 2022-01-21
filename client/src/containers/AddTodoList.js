@@ -1,4 +1,4 @@
-import AddTodoList from '../Components/AddTodoList';
+import AddTodoList from '../components/AddTodoList';
 import { connect } from 'react-redux';
 import { addTodoList } from '../modules/actions/todoList';
 function mapReduxStateToReactProps(state) {
