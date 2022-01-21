@@ -1,17 +1,23 @@
 import React from "react";
 import './App.css';
-import AddTodoListRoot from './Components/AddTodoListRoot';
-import DisplayTodoListRoot from "./Components/DisplayTodoListRoot";
-
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Header from "./components/Header";
+import DayTodoList from "./pages/DayTodoList";
+import Calendar from "./pages/Calendar";
 function App() {
   return (
-    <div className="App">
-      <div className="rootApp">
-        <AddTodoListRoot></AddTodoListRoot>
-        <DisplayTodoListRoot></DisplayTodoListRoot>
+    <BrowserRouter className="App">
+      <div className="App">
+        <Header />
+        <div className='rootApp'>
+          <Routes>
+            <Route path="/" element={<DayTodoList />} />
+            <Route path="calendar" element={<Calendar />} />
+          </Routes>
+        </div>
       </div>
 
-    </div>
+    </BrowserRouter>
   );
 }
 
