@@ -1,4 +1,4 @@
-import DisplayTodoList from '../Components/DisplayTodoList';
+import DisplayTodoList from '../components/DisplayTodoList';
 import { connect } from 'react-redux';
 import { deleteTodoList, successTodoList } from '../modules/actions/todoList';
 

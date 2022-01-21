@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import { IoHeartOutline, IoHeartSharp } from "react-icons/io5";
 import IconButton from '@mui/material/IconButton';
 import { VscClose } from "react-icons/vsc";
+import styles from '../css/DisplayTodoList.module.css';
 
 const StyledTextCell = styled(TableCell)(({ theme }) => ({
 
@@ -36,41 +37,45 @@ const StyledCloseButtonCell = styled(TableCell)(({ theme }) => ({
 function DisplayTodoList(props) {
     console.log(props.todoList)
     return (
-        <TableContainer component={Paper} >
-            <Table aria-label="simple table">
-                <TableBody>
-                    {props.todoList.map((todoThing, index) => (
-                        <TableRow
-                            key={todoThing.todoText}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell component="th" scope="row">
-                                <IconButton
-                                    value="check"
-                                    selected={todoThing.selected}
-                                    onClick={() => {
-                                        props.onClick(index);
-                                    }}>
-                                    {todoThing.icon}
-                                </IconButton>
-                            </TableCell>
+        <div className={styles.displayTodoListRoot}>
 
-                            <StyledTextCell align="right">
-                                {todoThing.todoText}
-                            </StyledTextCell>
-                            <StyledCloseButtonCell>
-                                <IconButton
-                                    onClick={() => {
-                                        props.onDelete(index);
-                                    }}>
-                                    <VscClose />
-                                </IconButton>
-                            </StyledCloseButtonCell>
+            <TableContainer component={Paper} >
+                <Table aria-label="simple table">
+                    <TableBody>
+                        {props.todoList.map((todoThing, index) => (
+                            <TableRow
+                                key={todoThing.todoText}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                <TableCell component="th" scope="row">
+                                    <IconButton
+                                        value="check"
+                                        selected={todoThing.selected}
+                                        onClick={() => {
+                                            props.onClick(index);
+                                        }}>
+                                        {todoThing.icon}
+                                    </IconButton>
+                                </TableCell>
 
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer >
+                                <StyledTextCell align="right">
+                                    {todoThing.todoText}
+                                </StyledTextCell>
+                                <StyledCloseButtonCell>
+                                    <IconButton
+                                        onClick={() => {
+                                            props.onDelete(index);
+                                        }}>
+                                        <VscClose />
+                                    </IconButton>
+                                </StyledCloseButtonCell>
+
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer >
+        </div>
+
     )
 
 }

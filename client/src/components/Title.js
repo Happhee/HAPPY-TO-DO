@@ -1,19 +1,17 @@
 import React from 'react';
-import AddTodoList from '../containers/AddTodoList';
-import '../css/AddTodoListRoot.css'
+import styles from '../css/AddTodoList.module.css'
 import { TiPencil } from "react-icons/ti";
-function AddTodoListRoot() {
+function Title() {
     return (
         <div >
-            <div className="titleDiv">
-                <span >HAPPY</span>
+            <div className={styles.titleContainer}>
+                <span  >HAPPY</span>
                 <span >TO</span>
                 <span >DO</span>
                 <TiPencil size="50" textDecoration="underline" />
             </div>
-            <AddTodoList></AddTodoList>
         </div>
     )
 }
 
-export default AddTodoListRoot;
+export default Title;
