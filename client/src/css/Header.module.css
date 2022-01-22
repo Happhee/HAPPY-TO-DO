@@ -5,6 +5,7 @@
   color: white;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 @media screen and (min-width : 1000px) {
     /* .container{

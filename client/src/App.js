@@ -9,14 +9,16 @@ function App() {
     <BrowserRouter className="App">
       <div className="App">
         <Header />
-        <div className='rootApp'>
+        <div className='content'>
           <Routes>
             <Route path="/" element={<DayTodoList />} />
             <Route path="calendar" element={<Calendar />} />
           </Routes>
         </div>
+        <footer>
+          <div>HAPPY 瑞喜</div>
+        </footer>
       </div>
-
     </BrowserRouter>
   );
 }
