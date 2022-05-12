@@ -16,7 +16,7 @@ function App() {
           </Routes>
         </div>
         <footer>
-          <div>HAPPY 瑞喜</div>
+          <div>Happhee</div>
         </footer>
       </div>
     </BrowserRouter>
